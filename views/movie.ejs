@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+<h1 class="main-heading">Movie details</h1>
+<%for(var i=0;i<searchOutput.length;i++){%>
+  <div class="movie-details">
+    <h2 class="movie-heading"><%= searchOutput[i].movieName %></h2>
+    <div class="movie-det">
+      <img class="movie-poster" src=<%=searchOutput[i].moviePoster%> alt=<%=searchOutput[i].movieName%>>
+      <div class="movie-detai">
+        <h4 class="release-date"><%=searchOutput[i].releaseDate %></h4>
+        <p class="movie-desc"><%=searchOutput[i].movieDesc%></p>
+        <br>
+        <p class="votes">Rating: <%=searchOutput[i].votes %></p>
+      </div>
+    </div>
+
+  </div>
+<%}%>
+
+
+
+
+<%- include('footer')-%>
